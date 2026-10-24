@@ -24,6 +24,13 @@ a:hover .g,figure:hover .g{filter:none}
 .tbl a:hover{color:var(--blue)}
 .tag{font:600 12.5px var(--mono);color:var(--blue)}
 .menu-btn{display:none;background:none;border:1px solid #000;font:600 13px var(--sans);padding:7px 12px}
+.lang-m{display:none;position:relative;margin-left:auto}
+.lang-m summary{list-style:none;cursor:pointer;border:1px solid #000;font:600 14.5px var(--mono);letter-spacing:0.04em;padding:7px 12px;user-select:none}
+.lang-m summary::-webkit-details-marker{display:none}
+.lang-m summary::after{content:"";display:inline-block;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;margin-left:8px;vertical-align:2px}
+.lang-m[open] summary{background:#000;color:#fff}
+.lang-m .langs{position:absolute;right:0;top:calc(100% + 6px);flex-direction:column;gap:4px;margin:0;background:#fff;z-index:30;min-width:100%}
+.lang-m .langs a{text-align:center}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 
 .mini{list-style:none;margin:0;padding:0}
@@ -135,6 +142,7 @@ body{padding-left:248px}
  .lnb-f{flex-wrap:nowrap!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none;gap:20px}.lnb-f::-webkit-scrollbar{display:none}.lnb-f a{flex:0 0 auto}.lnb-f.more{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
  .topbar{padding-top:0;padding-bottom:0}.topbar>span{display:none!important}.mnav{display:flex!important;justify-content:space-between;width:100%;font:700 15.5px/1 Pretendard,system-ui,sans-serif;letter-spacing:0}.mnav a{padding:13px 0}.mnav a.on{color:var(--blue)}
  .topbar{position:sticky;top:var(--rh,61px);background:#fff;z-index:19}
+ .lang-m{display:block}  /* 10/25 본인: 휴대폰은 하위 메뉴가 페이지마다 있으니 「메뉴」 칸 대신 언어 선택 */
  [id]{scroll-margin-top:calc(var(--rh,61px) + 60px)}  /* 페이지 안 이동 때 제목이 고정 줄 밑에 가리지 않게 */  /* 10/25 본인: 휴대폰에서 주 메뉴 줄도 로고 줄 바로 아래 고정(--rh = 로고 줄 높이, TOPBAR 스크립트가 잼) */
 }
 
