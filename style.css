@@ -141,7 +141,7 @@ body{padding-left:248px}
  .topbar span:last-child{display:none}
  .lnb-f{flex-wrap:nowrap!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none;gap:20px}.lnb-f::-webkit-scrollbar{display:none}.lnb-f a{flex:0 0 auto}.lnb-f.more{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
  .topbar{padding-top:0;padding-bottom:0}.topbar>span{display:none!important}.mnav{display:flex!important;justify-content:space-between;width:100%;font:700 15.5px/1 Pretendard,system-ui,sans-serif;letter-spacing:0}.mnav a{padding:13px 0}.mnav a.on{color:var(--blue)}
- .topbar{position:sticky;top:var(--rh,61px);background:#fff;z-index:19}
+ .topbar{position:sticky;top:calc(var(--rh,56px) - 1px);background:#fff;z-index:19}  /* 10/25: 화면 배율(125%% 등) 소수 높이에서 틈 → 1px 겹침 */
  .lang-m{display:block}  /* 10/25 본인: 휴대폰은 하위 메뉴가 페이지마다 있으니 「메뉴」 칸 대신 언어 선택 */
  [id]{scroll-margin-top:calc(var(--rh,61px) + 60px)}  /* 페이지 안 이동 때 제목이 고정 줄 밑에 가리지 않게 */  /* 10/25 본인: 휴대폰에서 주 메뉴 줄도 로고 줄 바로 아래 고정(--rh = 로고 줄 높이, TOPBAR 스크립트가 잼) */
 }
