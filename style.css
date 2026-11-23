@@ -567,6 +567,16 @@ body{padding-left:248px}
 .nowbar .d{font:600 12.5px var(--mono);letter-spacing:0.06em;background:#fff;color:var(--blue);padding:2px 6px}
 @media (max-width:980px){.nowbar .nb-k{padding:0 12px 0 var(--g)}.nowbar a{padding:11px 14px;font-size:13.5px}.nowbar .nb-n{display:none}}
 
+.igb{display:grid;grid-template-columns:minmax(0,1.25fr) repeat(4,minmax(0,1fr));border-bottom:1px solid #000}
+.igb>*{border-right:1px solid #000;min-width:0}.igb>*:last-child{border-right:0}
+.igb .tx{padding:28px var(--g);display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.igb .tx .k{font:500 13.5px var(--mono);letter-spacing:0.06em;color:var(--muted)}
+.igb .tx h3{font-size:30px;letter-spacing:-.04em;line-height:1.1;margin-top:10px;word-break:break-all}
+.igb .btn{display:inline-block;background:var(--blue);color:#fff;font:600 14px var(--sans);padding:11px 16px;align-self:flex-start}
+.igb a.p{display:block}.igb img{aspect-ratio:3/4;object-fit:cover;width:100%;height:100%}
+@media (max-width:980px){.igb{grid-template-columns:1fr 1fr}.igb .tx{grid-column:1/-1;border-right:0;border-bottom:1px solid #000;flex-direction:row;align-items:end;padding:20px var(--g)}
+ .igb a.p:nth-of-type(2n){border-right:0}.igb a.p:nth-of-type(-n+2){border-bottom:1px solid #000}}
+
 .langs{display:flex;gap:6px;margin:0 0 12px}
 .langs a{display:inline-block;border:1px solid var(--blue);color:var(--blue);font:600 13.5px var(--mono);letter-spacing:0.04em;line-height:1.2;padding:5px 10px;white-space:nowrap;flex:0 0 auto}  /* 10/25 영·중·베 페이지에서 KO/R처럼 글자가 세로로 쪼개지는 것 막음(김채린 지적) */
 .langs a.on,.langs a:hover{background:var(--blue);color:#fff}
