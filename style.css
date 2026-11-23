@@ -446,10 +446,15 @@ body{padding-left:248px}
 .pp-office dt{font:500 13px var(--mono);color:var(--muted)}
 .pp-note{font-size:13.5px;color:var(--muted);margin-top:14px}
 .pp-grid.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
-/* 11/23 본인: 교수 카드를 다른 교강사 카드와 같은 크기로. 옛 값(10/14 두 칸 폭): .pp-card-prof{grid-column:span 2;grid-template-columns:160px minmax(0,1fr);gap:24px;padding:24px} h3 25px, small 13.5px, p 14.5px, chips 11.5px */
+/* 11/23 본인: 교수 카드 = 교강사 카드의 1.5배(전체 폭의 절반). 오전에 강사 카드와 같게 줄였다가 「너무 좁아 보여」 → 이 값. 옛 값(10/14 두 칸 폭): span 2, 사진 160px, 이름 25px */
+.pp-grid-head{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pp-card-prof{grid-template-columns:140px minmax(0,1fr);gap:22px;padding:22px}
+.pp-card-prof h3{font-size:22px}.pp-card-prof h3 small{font-size:14px;margin-top:3px}
+.pp-card-prof p{font-size:14px}
 @media (max-width:1200px){.pp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){
- .pp-grid,.pp-grid.c2{grid-template-columns:1fr}
+ .pp-grid,.pp-grid.c2,.pp-grid-head{grid-template-columns:1fr}
+ .pp-card-prof{grid-template-columns:110px minmax(0,1fr);gap:16px;padding:18px}
  .pp-prof{grid-template-columns:1fr}
  .pp-prof figure{border-right:0;border-bottom:1px solid #000;aspect-ratio:4/3}
  .pp-prof figure img{object-position:50% 25%}
